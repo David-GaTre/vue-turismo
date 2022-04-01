@@ -1,15 +1,16 @@
-var app = new Vue({ 
-    el: '#app',
-    data: {
-        mostrar: 0,
-        imgs: [
-            ['./assets/cerro_silla.jpg', "Cerro de la silla"],
-            ['./assets/marco.jpg', "Musero MARCO"],
-            ['./assets/chipinque.jpg', "Chipinque"],
-        ],
-        isHidden: false,
-        image: '',
-        nombre_lugar: ''
+var app = Vue.createApp({ 
+    data() {
+        return {
+            mostrar: 0,
+            imgs: [
+                ['./assets/cerro_silla.jpg', "Cerro de la silla"],
+                ['./assets/marco.jpg', "Musero MARCO"],
+                ['./assets/chipinque.jpg', "Chipinque"],
+            ],
+            isHidden: false,
+            image: '',
+            nombre_lugar: ''
+        }
     },
     methods: {
         subirPasatiempo(e) {
@@ -35,3 +36,4 @@ var app = new Vue({
         }
     }
 });
+app.mount("#app")
